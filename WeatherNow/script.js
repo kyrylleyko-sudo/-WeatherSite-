@@ -22,21 +22,22 @@ async function getWeather() {
             return;
         }
 
-        // Поточна погода
         weatherBox.innerHTML = `
             <h2>${weatherData.name}</h2>
             <img class="icon" src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png">
             <p><b>Температура:</b> ${weatherData.main.temp}°C</p>
-            <p><b>Вітер:</b> ${weatherData.wind.speed} м/с</p>
+            <p><b>Відчувається як:</b> ${weatherData.main.feels_like}°C</p>
             <p><b>Опис:</b> ${weatherData.weather[0].description}</p>
+            <p><b>Вітер:</b> ${weatherData.wind.speed} м/с</p>
         `;
 
         forecastBox.innerHTML = "";
-        const filtered = forecastData.list.filter(item => item.dt_txt.includes("12:00:00"));
+        const filtered = forecastData.list.filter(item =>
+            item.dt_txt.includes("12:00:00")
+        );
 
         filtered.forEach(day => {
-            const date = new Date(day.dt_txt);
-            const d = date.toLocaleDateString("uk-UA", {
+            const date = new Date(day.dt_txt).toLocaleDateString("uk-UA", {
                 weekday: "short",
                 day: "numeric",
                 month: "numeric"
@@ -44,14 +45,15 @@ async function getWeather() {
 
             forecastBox.innerHTML += `
                 <div class="day">
-                    <p>${d}</p>
+                    <p>${date}</p>
                     <img class="icon" src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png">
                     <p>${day.main.temp}°C</p>
                 </div>
             `;
         });
 
-    } catch (err) {
-        weatherBox.innerHTML = "<p>Помилка завантаження даних...</p>";
+    } catch (error) {
+        weatherBox.innerHTML = "<p>Помилка при отриманні даних...</p>";
+        console.error(error);
     }
 }
