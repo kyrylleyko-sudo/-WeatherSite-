@@ -1,45 +1,61 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #74ebd5, #acb6e5);
+    margin: 0;
+    padding: 0;
 }
 
-.weather-app {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+.app {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffffcc;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 input {
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  width: 200px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #999;
 }
 
 button {
-  padding: 10px 15px;
-  margin-left: 10px;
-  border: none;
-  border-radius: 10px;
-  background: #005eff;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
+    padding: 10px 14px;
+    border: none;
+    background: #4e73df;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-button:hover {
-  background: #003cb3;
+.weather-box {
+    margin-top: 20px;
+    font-size: 18px;
 }
 
-.result {
-  margin-top: 20px;
+.icon {
+    width: 80px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.day {
+    background: #e8e8e8;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
 }
