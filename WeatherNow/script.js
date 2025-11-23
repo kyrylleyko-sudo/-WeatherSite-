@@ -25,8 +25,8 @@ async function getWeather() {
         weatherBox.innerHTML = `
             <h2>${weatherData.name}</h2>
             <img class="icon" src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png">
-            <p><b>Температура:</b> ${weatherData.main.temp}°C</p>
-            <p><b>Відчувається як:</b> ${weatherData.main.feels_like}°C</p>
+            <p><b>Температура:</b> ${Math.round(weatherData.main.temp)}°C</p>
+            <p><b>Відчувається як:</b> ${Math.round(weatherData.main.feels_like)}°C</p>
             <p><b>Опис:</b> ${weatherData.weather[0].description}</p>
             <p><b>Вітер:</b> ${weatherData.wind.speed} м/с</p>
         `;
@@ -47,7 +47,7 @@ async function getWeather() {
                 <div class="day">
                     <p>${date}</p>
                     <img class="icon" src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png">
-                    <p>${day.main.temp}°C</p>
+                    <p>${Math.round(day.main.temp)}°C</p>
                 </div>
             `;
         });
