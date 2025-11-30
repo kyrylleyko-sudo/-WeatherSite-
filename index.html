@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app">
+        <h1>Прогноз погоди</h1>
+
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Введіть місто">
+            <button onclick="getWeather()">Пошук</button>
+        </div>
+
+        <div id="weather" class="weather-box"></div>
+
+        <h2>Прогноз на 5 днів</h2>
+        <div id="forecast" class="forecast"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
