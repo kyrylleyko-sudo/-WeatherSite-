@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #74ebd5, #acb6e5);
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffffcc;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #999;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    background: #4e73df;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.weather-box {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.icon {
+    width: 80px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.day {
+    background: #e8e8e8;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+}
